@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Name</title>
+</head>
+
+<body "background-image : url({{ url_for('static', filename='metric.jpeg') }})">
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Scrapping Company Name</h2>
+            <input id="first" name="url" type="string">
+           
+            <br><br><button id="sub" type="submit ">Find the Company Name</button>
+            <br>
+
+
+
+            
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 150px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 2000px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+   
+        #first {
+            border-radius: 50px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        
+    </style>
